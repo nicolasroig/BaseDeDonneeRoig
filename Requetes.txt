@@ -1,0 +1,9 @@
+SELECT * FROM `t_client` WHERE `nom` LIKE 'benteke'
+
+SELECT * FROM `t_client` WHERE `nom` NOT LIKE 'Lionel' AND `prenom` NOT LIKE 'Messi'
+
+SELECT * FROM `t_client` WHERE `nom` != 'jeff'
+
+SELECT * FROM `t_client` WHERE `nom` LIKE 'thibaut'
+
+SELECT * FROM `t_client` WHERE `nom` LIKE '%thib%'

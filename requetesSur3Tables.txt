@@ -1,0 +1,38 @@
+
+SELECT * FROM t_preter_materiel 
+INNER JOIN t_client ON t_client.Id_client = t_preter_materiel.fk_client 
+INNER JOIN t_materiel ON t_materiel.id_materiel = t_preter_materiel.fk_materiel
+
+
+SELECT id_client, nom , id_materiel, numero_de_serie FROM t_preter_materiel 
+INNER JOIN t_client ON t_client.Id_client = t_preter_materiel.fk_client 
+INNER JOIN t_materiel ON t_materiel.id_materiel = t_preter_materiel.fk_materiel
+
+
+SELECT id_client, nom , id_materiel, numero_de_serie FROM t_preter_materiel
+INNER JOIN t_materiel ON t_materiel.id_materiel = t_preter_materiel.fk_materiel
+RIGHT JOIN t_client ON t_client.id_client = t_preter_materiel.fk_client
+
+
+SELECT id_client, nom , id_materiel, numero_de_serie FROM t_preter_materiel
+RIGHT JOIN t_materiel ON t_materiel.id_materiel = t_preter_materiel.fk_materiel
+LEFT JOIN t_client ON t_client.id_client = t_preter_materiel.fk_client
+
+
+SELECT id_client, nom , id_materiel, numero_de_serie FROM t_preter_materiel
+INNER JOIN t_materiel ON t_materiel.id_materiel = t_preter_materiel.fk_materiel
+RIGHT JOIN t_client ON t_client.id_client = t_preter_materiel.fk_client
+WHERE t_preter_client.fk_materiel IS NULL
+ORDER BY id_client
+
+
+SELECT id_client, nom , id_materiel, numero_de_serie FROM t_preter_materiel
+RIGHT JOIN t_materiel ON t_materiel.id_materiel = t_preter_materiel.fk_materiel
+LEFT JOIN t_client ON t_client.id_client = t_preter_materiel.fk_client
+WHERE t_preter_materiel.fk_client IS NULL
+
+
+
+
+
+
